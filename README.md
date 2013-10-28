@@ -15,7 +15,7 @@ Para ello realizar los siguientes pasos:
 
 	2.1.-) Darse de alta en 'https://travis-ci.org/' y permitir que se acceda desde Github (poniendo a ON el proyecto).
 	
-	2.2.) Crear un fichero '.travis.yml' que contenga el listado de plataformas sobre las que se quiere comprobar el correcto funcionamiento, por ejemplo:
+	2.2.-) Crear un fichero '.travis.yml' que contenga el listado de plataformas sobre las que se quiere comprobar el correcto funcionamiento, por ejemplo:
 
 		language: ruby
 		rvm:
