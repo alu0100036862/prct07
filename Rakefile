@@ -7,5 +7,5 @@ task :default => :spec
 
 desc "Ejecutar las espectativas de la clase Racional"
 task :local do
-  sh "rspec --format documentation -Ilib -Itest test/racional_spec.rb"
+  sh "rspec --format documentation -Ilib -Ispec spec/racional_spec.rb"
 end
