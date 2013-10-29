@@ -1,16 +1,11 @@
-task :default => :bin
+$:.unshift File.dirname(__FILE__) + 'lib'
+$:.unshift './lib', './spec'
 
-desc "Run lib/frac_main.rb"
-task :bin do
-  sh "ruby -Ilib bin/frac_main.rb"
-end
+require 'rspec/core/rake_task'
+RSpec::Core::RakeTask.new
+task :default => :spec
 
-desc "Run tests with --format documentation"
-task :test do
-  sh "rspec -Ilib test/racional_spec.rb --format documentation"
-end
-
-desc "Run tests with format: html"
-task :thtml do
-  sh "rspec test/racional_spec.rb --format html > resultados.html"
+desc "Ejecutar las espectativas de la clase Racional"
+task :local do
+  sh "rspec --format documentation -Ilib -Itest test/racional_spec.rb"
 end
