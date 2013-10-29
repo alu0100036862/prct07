@@ -42,7 +42,7 @@ describe Racional do
 
   end
 
-  describe "# tests de operaciones con una sola fracción" do	
+  describe "# tests de operaciones con una sola fraccion" do	
 
     it "Se debe calcular el valor absoluto de una fraccion con el metodo abs" do
       Racional.new(-1,3).abs.should == @fraccion1
